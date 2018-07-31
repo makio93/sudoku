@@ -1,0 +1,44 @@
+#include <windows.h>
+#include "resource.h"
+
+MYICON	ICON	"Sudoku_icon.ico"
+
+MYMENU MENU
+BEGIN
+	POPUP "ファイル(&F)"
+	BEGIN
+		MENUITEM "終了(&X)", IDM_END
+	END
+	POPUP "ツール(&T)"
+	BEGIN
+		MENUITEM "現在の盤面を入力(&I)", IDM_SAVEINPUT
+		MENUITEM "出力結果を全削除(&O)", IDM_OUTPUTDEL
+		MENUITEM "小文字を全削除(&S)", IDM_SMALLDEL
+		MENUITEM "盤面を全削除(&D)", IDM_ALLDEL
+	END
+	POPUP "文字(&C)"
+	BEGIN
+		MENUITEM "小文字入力に変更(&S)", IDM_SIZECHANGE
+	END
+	POPUP "モード(&M)"
+	BEGIN
+		MENUITEM "解析モード(&A)", IDM_ANALYZE
+		MENUITEM "生成モード(&G)", IDM_GENERATE
+		MENUITEM "解答モード(&S)", IDM_SOLVE
+	END
+END
+
+MYDLG DIALOGEX 131, 100, DLGW, DLGH
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | 
+	WS_CAPTION | WS_SYSMENU
+CAPTION "難易度の指定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+	EDITTEXT	IDC_EDIT1, 10, 45, 140, 15
+	DEFPUSHBUTTON	"開始", IDOK, 10, 70, 50, 15
+	PUSHBUTTON	"中止", IDCANCEL, 140, 70, 50, 15
+	LTEXT		"問題レベルを指定してください(1～10)\r\n無指定の場合はnを入力します",
+				IDC_STATIC, 10, 20, 180, 25
+	LTEXT		"くらい", IDC_SUFFIX, 150, 45, 40, 15
+END
+ 

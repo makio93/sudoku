@@ -1,0 +1,19 @@
+#define MYICON 401
+#define IDM_END 501
+#define IDM_SAVEINPUT 511
+#define IDM_OUTPUTDEL 512
+#define IDM_SMALLDEL 513
+#define IDM_ALLDEL 514
+#define IDM_SIZECHANGE 521
+#define IDM_ANALYZE 531
+#define IDM_GENERATE 532
+#define IDM_SOLVE 533
+#define IDC_EDIT1 611
+#define IDC_STATIC 601
+#define IDC_SUFFIX 602
+
+#define FONTW 8
+#define BMPW 725
+#define BMPH 500
+#define DLGW 200
+#define DLGH 100
